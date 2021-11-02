@@ -1,0 +1,1 @@
+Implementação do desafio do módulo "Pro" do curso "Gravidade Zero" da QA Ninja
