@@ -54,7 +54,7 @@ Empty Email
     Go To Login Page
     Fill Credentials  ${user}
     Submit Credentials
-    Validate One Empty Field  E-mail obrigatório
+    Alert Span Should Be  E-mail obrigatório
 
 Empty Password
     [Tags]  desafio
@@ -64,17 +64,21 @@ Empty Password
     Go To Login Page
     Fill Credentials  ${user}
     Submit Credentials
-    Validate One Empty Field  Senha obrigatória
+    Alert Span Should Be    Senha obrigatória
 
 Empty Email and Empty Password
     [Tags]  desafio
 
      ${user}       Create Dictionary       email=                       password=
 
+     @{expected_alerts}      Create List
+    ...                     E-mail obrigatório 
+    ...                     Senha obrigatória
+
     Go To Login Page
     Fill Credentials  ${user}
     Submit Credentials
-    Validate Two Empty Fields  E-mail obrigatório  Senha obrigatória
+    Alert Spans Should Be   ${expected_alerts}
 
 
 

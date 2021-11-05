@@ -31,21 +31,4 @@ User Should Be Logged In
 
 Should Be Type Email
 
-    Get Property        ${INPUT_EMAIL}        type        equal       email   
-
-
-Validate One Empty Field
-    [Arguments]     ${message}
-
-    ${element}      Get Element     css=.error    
-    
-    Get Text        ${element}      equal       ${message}      
-
-Validate Two Empty Fields
-    [Arguments]     ${message1}     ${message2}
-
-    ${elements}     Get Elements    css=.error    
-    
-    Get Text            ${elements}[0]      equal       ${message1}
-    Get Text            ${elements}[1]      equal       ${message2}             
-
+    Get Property        ${INPUT_EMAIL}        type        equal       email      
