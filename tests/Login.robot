@@ -9,7 +9,7 @@ Test Teardown       Finish Session
 *Test Cases*
 User login
 
-    ${user}                 Factory User Login
+    ${user}                 Factory User    login
   
     Go To Login Page
     Fill Credentials    ${user}      
@@ -46,37 +46,34 @@ Incorrect Email
     Submit Credentials
     Should Be Type Email
 
-Empty Email
+Required Email
     [Tags]  desafio
 
-     ${user}       Create Dictionary       email=                       password=pwd123
+     ${user}       Create Dictionary       email=${EMPTY}                       password=pwd123
 
     Go To Login Page
     Fill Credentials  ${user}
     Submit Credentials
     Alert Span Should Be  E-mail obrigatório
 
-Empty Password
+Required Password
     [Tags]  desafio
 
-     ${user}       Create Dictionary       email=raphael.mantilha@gmail.com     password=
+     ${user}       Create Dictionary       email=raphael.mantilha@gmail.com     password=${EMPTY}
 
     Go To Login Page
     Fill Credentials  ${user}
     Submit Credentials
     Alert Span Should Be    Senha obrigatória
 
-Empty Email and Empty Password
+Required Fields
     [Tags]  desafio
-
-     ${user}       Create Dictionary       email=                       password=
 
      @{expected_alerts}      Create List
     ...                     E-mail obrigatório 
     ...                     Senha obrigatória
 
     Go To Login Page
-    Fill Credentials  ${user}
     Submit Credentials
     Alert Spans Should Be   ${expected_alerts}
 
