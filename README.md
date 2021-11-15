@@ -1,7 +1,7 @@
 # Template Robot Framework
 
 ## Objetivo 
-Este projeto implementa o desafio 1 do módulo Pro do curso "Gravidade Zero" da QA Ninja.
+Este projeto implementa o desafio 2 do módulo Pro do curso "Gravidade Zero" da QA Ninja.
 
 ## Como configurar o ambiente
 * Faça a instalação do Python 3.7 ou superior. Não esqueça de selecionar "Add Python to PATH" durante esta instalação.

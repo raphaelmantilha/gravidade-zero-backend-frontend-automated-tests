@@ -62,7 +62,6 @@ Geek with Wrong Parameter
 
      ${geek_profile}    Create Dictionary
      ...                whats=${whatsapp}
-    #  ...                desc=Formato seu computador, instalo o sistema operacional (Linux e Windows) e todos as ferramentas que você gosta de usar
      ...                printer_repair=Sim      work=Remoto     cost=${cost}
 
     IF  ${number_of_execution} == 1   
@@ -74,17 +73,8 @@ Geek with Wrong Parameter
     IF  '${expected_message}' == 'Informe a descrição do seu trabalho'
         Set To Dictionary   ${geek_profile}     desc    ${EMPTY}
     ELSE 
-        Set To Dictionary   ${geek_profile}     desc    Formato seu computador, instalo o sistema operacional (Linux e Windows) e todos as ferramentas que você gosta de usar  
+        Set To Dictionary   ${geek_profile}     desc    Formato seu computador, i  nstalo o sistema operacional (Linux e Windows) e todos as ferramentas que você gosta de usar  
     END
-
-    
-    # IF  ${expected_message}     ==  Informe a descrição do seu trabalho
-    #     ${geek_profile}[desc]   Set Variable    ${EMPTY}
-    # END
-
-    # ${geek_profile}[desc]   Set Variable If     ${number_of_execution}==4   ${EMPTY} 
-    # Evaluate    ${geek_profile}[desc]   xpto 
-    # Log To Console  ${geek_profile}[desc]   
 
     Fill Geek Form  ${geek_profile}
     Submit Geek Form
