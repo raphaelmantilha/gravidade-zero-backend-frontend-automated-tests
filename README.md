@@ -1,4 +1,4 @@
-# Template Robot Framework
+# Automação com Robot Framework
 
 ## Objetivo 
 Este projeto implementa o desafio 2 do módulo Pro do curso "Gravidade Zero" da QA Ninja.
