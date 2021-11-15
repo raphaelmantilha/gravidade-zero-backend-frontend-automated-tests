@@ -73,7 +73,7 @@ Geek with Wrong Parameter
     IF  '${expected_message}' == 'Informe a descrição do seu trabalho'
         Set To Dictionary   ${geek_profile}     desc    ${EMPTY}
     ELSE 
-        Set To Dictionary   ${geek_profile}     desc    Formato seu computador, i  nstalo o sistema operacional (Linux e Windows) e todos as ferramentas que você gosta de usar  
+        Set To Dictionary   ${geek_profile}     desc    Formato seu computador, instalo o sistema operacional (Linux e Windows) e todos as ferramentas que você gosta de usar
     END
 
     Fill Geek Form  ${geek_profile}
