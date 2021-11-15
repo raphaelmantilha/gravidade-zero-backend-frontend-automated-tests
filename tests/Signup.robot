@@ -51,7 +51,7 @@ Required Fields
     Alert Spans Should Be   ${expected_alerts}
 
 Short Password
-    [Tags]          attempt_signup      short_pass
+    [Tags]          short_password      short_pass
     [Template]      Signup With Short Pass
     1
     12

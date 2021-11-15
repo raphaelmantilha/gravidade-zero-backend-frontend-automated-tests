@@ -40,6 +40,32 @@ def factory_user(target):
                 'work': 'Remoto',
                 'cost': '100'
             }
+        },
+        'short_desc':{
+            'name': 'Peter',
+            'lastname': 'Jordan',
+            'email': 'peter@einerd.com',
+            'password': 'pwd123',
+            'geek_profile': {
+                'whats': '21999999999',
+                'desc': 'Formato seu PC',
+                'printer_repair': 'Não',
+                'work': 'Ambos',
+                'cost': '200'
+            }
+        },
+          'long_desc':{
+            'name': 'Dio',
+            'lastname': 'Linux',
+            'email': 'dio@linux.com',
+            'password': 'pwd123',
+            'geek_profile': {
+                'whats': '11999999999',
+                'desc': 'Esta descrição deve ter mais que 255 caracteres. Por este motivo, estou escrevendo sem parar porque preciso atingir esta quantidade de caracteres. Este é um teste do curso "Gravidade Zero" da QA Ninja e eu estou testando o formulário de cadastro de Geeks. 123456789',
+                'printer_repair': 'Não',
+                'work': 'Remoto',
+                'cost': '150'
+            }
         }
     }
 
