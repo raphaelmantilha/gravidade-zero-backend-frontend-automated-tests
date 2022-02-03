@@ -74,7 +74,7 @@ jobs:
       run: |
         chmod +x ./frontend/run.sh
         cd frontend/ && ./run.sh
-    - name: Upload API Test Results
+    - name: Upload Web Test Results
       uses: actions/upload-artifact@v2.3.1
       if: always()
       with:
