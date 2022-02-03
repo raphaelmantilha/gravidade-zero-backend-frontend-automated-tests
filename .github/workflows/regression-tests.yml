@@ -42,7 +42,7 @@ jobs:
         reporter: java-junit
   
   web_tests:
-    needs: api-tests
+    needs: api_tests
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
