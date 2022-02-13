@@ -24,8 +24,7 @@ User session
 
     Status Should Be    200                 ${response}
     ${size}             Get Length          ${response.json()}[token]
-    ${expected_size}    Convert To Integer  140
-    Should Be Equal     ${expected_size}    ${size}
+    Should Be True      ${size} > 0
     Should Be Equal     10d                 ${response.json()}[expires_in]
 
 Should Not Get token
